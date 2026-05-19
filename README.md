@@ -1,12 +1,13 @@
 # It's summer break and I am bored
 
-## So I decided to try new things on C
+## So I decided to try new things on C 
+See more about what I am trying to do [here](story-tell.md)
 
-1. I made a rotating cube to test raylib library. 
+1. Spinning cube. 
 
 ![GIF of a rotating cube](images/cube.gif)
 
-2. I made starfield space simulation screen saver from Windows 95
+2. Starfield screen saver from Windows 95.
 
 ![GIF of Starfield screen saver](images/starfield.gif)
 
@@ -21,7 +22,7 @@ Run the cube
 # 1. To compile and run the spinning cube
 make run_cube
 
-# 2. To compile and run the starfield space simulation
+# 2. To compile and run the starfield
 make run_starfield
 
 # 3. To compile everything at once

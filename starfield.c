@@ -25,7 +25,7 @@ int main(){
         clear();
 
         for (int i = 0; i < STAR_COUNT; i++) {
-            stars[i]->z -= 0.003; 
+            stars[i]->z -= 0.004; 
 
             if (stars[i]->z <= 0.0) {
                 stars[i]->z = 5.0;

@@ -1,4 +1,3 @@
-# 1. ISLETIM SISTEMI ALGILAMA
 ifeq ($(OS),Windows_NT)
     CFLAGS = -Wall -std=c11
     LDFLAGS = -lraylib -lopengl32 -lgdi32 -lwinmm
@@ -20,28 +19,22 @@ else
     endif
 endif
 
-# 2. DEGISKENLER
 CC = gcc
-COMMON = renderer.c
+COMMON = renderer.c math4.c
 
-# 3. PROJELERIN LISTESI (Yeni bir sey yapınca buraya bosluk bırakıp eklersin)
 PRODUCTS = cube starfield 
 
-# Hepsini birden derlemek icin 'make all'
 all: $(PRODUCTS)
 
-# Her projenin derleme kuralı (Olay bu kadar basit)
 cube: cube.c $(COMMON)
 	$(CC) cube.c $(COMMON) -o cube$(EXT) $(CFLAGS) $(LDFLAGS)
 
 starfield: starfield.c $(COMMON)
 	$(CC) starfield.c $(COMMON) -o starfield$(EXT) $(CFLAGS) $(LDFLAGS)
 
-# Temizlik
 clean:
 	$(RM) cube$(EXT) starfield$(EXT)
 
-# Calıstırma kısayolları
 run_cube: cube
 	./cube$(EXT)
 

@@ -1,4 +1,5 @@
 #include "renderer.h"
+#include "math4.h"
 
 
 int main() {
@@ -21,11 +22,14 @@ int main() {
 
         angle += 100.0 / FPS;
 
+        mat4 rotY = mat4_rotate_y(angle);
+        mat4 transZ = mat4_translate(0, 0, dz);
+
+        mat4 transformation = mat4_multiply(transZ, rotY);
+
         point_3d scene[8];
         for(int i = 0; i < 8; i++) {
-            scene[i] = *arr[i];
-            rotate_xz(&scene[i], angle);
-            translate_z(&scene[i], dz);
+            scene[i] = mat4_multiply_point(transformation, *arr[i]);
             draw_3d_point(&scene[i], VERTEX_SIZE, RED);
         }
 

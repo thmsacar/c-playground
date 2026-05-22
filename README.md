@@ -11,6 +11,8 @@ See more about what I am trying to do [here](story-tell.md)
 
 ![GIF of Starfield screen saver](images/starfield.gif)
 
+3. Implemented [Spatial Transformation Matrices](math4.c)
+
 ## Compile & Run
 
 I vibe coded a multi-platform(?) Makefile. Only tested on macOS.
